@@ -5,14 +5,13 @@ import FileAPI from "../../api/file/FileAPI";
 import useAsync from "../../libs/hooks/async/useAsync";
 import {sanitizeError} from "../../libs/error/ErrorLib";
 
-const FileManagerPageContainer = (props) => {
+const FileManagerPageContainer = () => {
     const [page, setPage] = useState(0);
     const [pageData, setPageData] = useState({loading: false, notifications: []});
     const {loading, notifications} = pageData;
 
     const { data, isRejected, isPending, retry } = useAsync(
         (signal) => {
-            setPageData({...pageData, notifications: []});
             return FileAPI.list(page, signal)
         },
         [page]

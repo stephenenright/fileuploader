@@ -45,7 +45,7 @@ const FileManagerPage = ({
             <ContentWrapper>
                 <PageLayout.Title title="File Manager" />
                 <PageLayout.Content>
-                    <PageNotifications notifications={notifications} />
+                    <PageNotifications autoHide={2000} notifications={notifications} />
                     <Toolbar>
                         <Button onClick={onRefresh} variant="secondary">Refresh</Button>
                         <Button onClick={onUpload} variant="secondary">Upload</Button>

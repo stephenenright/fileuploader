@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import PageNotification from "./PageNotification";
 
-const PageNotifications = ({notifications}) => {
+const PageNotifications = ({notifications, autoHide}) => {
     if (!notifications || notifications.length ===0) {
         return null;
     }
@@ -11,11 +11,11 @@ const PageNotifications = ({notifications}) => {
     const resolvedNotifications = notifications.map((n, index) => {
         if(n.error && n.error.message) {
             return (
-                <PageNotification key={index} variant="danger" message={n.error.message} id={n.id} />
+                <PageNotification key={index} autoHide={autoHide} variant="danger" message={n.error.message} id={n.id} />
             )
         } else if (n.success && n.success.message) {
             return (
-                <PageNotification key={index} variant="success" message={n.success.message} />
+                <PageNotification key={index} autoHide={autoHide} variant="success" message={n.success.message} />
             )
         } else {
             return null;
@@ -31,7 +31,8 @@ const PageNotifications = ({notifications}) => {
 
 
 PageNotifications.propTypes = {
-  notifications: PropTypes.array
+  notifications: PropTypes.array,
+  autoHide: PropTypes.number,
 };
 
 
