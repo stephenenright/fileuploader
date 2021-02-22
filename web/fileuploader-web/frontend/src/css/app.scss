@@ -1,0 +1,64 @@
+@import "common/base";
+
+html, body {
+  font-size: 100%;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  position: relative;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  background-color: #edeff0;
+}
+
+.app-container {
+
+  .app-header {
+    background-color: #00b279;
+
+    .navbar-brand {
+      color: #FFF;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+
+      svg {
+        margin-right: 0.625rem;
+        fill: #FFF;
+      }
+    }
+  }
+
+  .app-content-wrapper {
+    max-width: 1200px;
+    padding: 1.25rem;
+    margin: auto;
+    text-align: center;
+  }
+
+  .app-content {
+    text-align: left;
+  }
+}
+
+.app-error-boundary {
+  background-color: #00b279;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ac-form-required {
+  color: $danger;
+}

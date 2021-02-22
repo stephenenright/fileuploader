@@ -1,0 +1,20 @@
+@import "../../common/base";
+
+
+.ac-page-notifications {
+  margin: auto;
+  text-align: center;
+
+  .alert {
+    margin: auto auto 1.25rem;
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+  .ac-page-notifications {
+    .alert {
+      width: 70%;
+    }
+  }
+}

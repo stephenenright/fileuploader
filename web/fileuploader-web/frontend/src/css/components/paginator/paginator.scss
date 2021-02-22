@@ -1,0 +1,18 @@
+.ac-paginator {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1.25rem;
+  align-items: center;
+
+  &--algin-start {
+    justify-content: flex-start;
+  }
+
+  &--align-end {
+    justify-content: flex-end;
+  }
+
+  .btn svg {
+    stroke: #FFF;
+  }
+}

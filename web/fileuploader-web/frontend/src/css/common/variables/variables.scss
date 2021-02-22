@@ -1,0 +1,39 @@
+$base-font-size-browser-px:                     16;
+$base-spacing-scale-px:                         6;
+$base-font-size-rel:                            1;
+$base-font-size-rem:                            1rem;
+
+$base-font-size-px:                             $base-font-size-rel * $base-font-size-browser-px;
+$base-spacing-px:                               $base-font-size-px + $base-spacing-scale-px;
+$base-spacing-rel:                              $base-spacing-px / $base-font-size-browser-px;
+
+
+$font-size-base:                                $base-font-size-rel !default;
+$line-height-base:                              $base-spacing-rel !default;
+
+
+$border-primary-color:                          #ddd !default;
+
+
+$danger-100:                                    #FFE9E8 !default;
+$danger-50:                                     #FFF9F8 !default;
+
+
+$text-primary:                                  rgba(0, 0, 0, 0.87) !default;
+$text-secondary:                                rgba(0, 0, 0, 0.64) !default;
+
+
+$panel-bg-color:                                #fff !default;
+$panel-border-color:                            $border-primary-color !default;
+
+
+$icon-size-small:                               ($base-spacing-px / 1.5) + 0px;
+$icon-size-medium:                              $base-spacing-px + 0px;
+$icon-size-large:                               ($base-spacing-px * 2) + 0px;
+$icon-size-xlarge:                              ($base-spacing-px * 4) + 0px;
+
+
+$error-message-title-color:                     $text-primary !default;
+
+
+

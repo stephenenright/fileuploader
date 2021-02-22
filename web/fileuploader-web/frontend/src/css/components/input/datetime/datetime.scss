@@ -1,0 +1,11 @@
+.ac-datetime-control {
+
+  .btn svg {
+    stroke: #FFF;
+  }
+
+  ~ .invalid-feedback {
+    display: block;
+  }
+
+}

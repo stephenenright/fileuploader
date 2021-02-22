@@ -1,0 +1,53 @@
+@import '../../../common/base';
+
+.ac-breadcrumbs  {
+  border-top: 1px solid #edf0f5;
+  border-bottom: 1px solid #edf0f5;
+  padding-top: 1.25rem;
+  background-color: #ddd;
+  margin-bottom: 1.25rem;
+
+  .ac-breadcrumbs-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-bottom: 1.25rem;
+      margin-right: 0.325em;
+      list-style: none;
+
+      span.ac-breadcrumb__divider {
+        margin-right: 0.325em;
+      }
+
+      .ac-breadcrumb__link,
+      .ac-breadcrumb__static {
+        padding: 0.225em;
+        font-size: 1.1rem;
+        border-bottom: 1px solid transparent;
+      }
+
+      .ac-breadcrumb__static {
+        color: #43525b;
+        font-weight: 600;
+      }
+
+      .ac-breadcrumb__link {
+        cursor: pointer;
+        color: #3b3f5c;
+        text-decoration: none;
+
+        &:hover {
+          border-bottom: 1px solid #43525b;
+          color: #43525b;
+        }
+      }
+    }
+  }
+}

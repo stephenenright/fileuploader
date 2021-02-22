@@ -1,0 +1,56 @@
+@import "../../common/base";
+
+.ac-file-list {
+
+  .ac-file-list__empty {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+
+  .ac-file-list__panel-body {
+    padding: 0;
+  }
+
+  .ac-file-list__item {
+    padding: 1.25rem;
+    border-bottom: 1px solid $border-primary-color;
+  }
+
+  .ac-file-list__buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+    .btn {
+      margin-left: 0.625rem;
+      margin-bottom: 0.625rem;
+
+      svg {
+        stroke: #fff;
+      }
+    }
+
+  }
+
+  .ac-file-list__properties {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .ac-file-list__property {
+      display: flex;
+      flex-flow: row wrap;
+
+      .ac-file-list__property__label {
+        font-weight: 700;
+        margin-right: 0.625rem;
+      }
+
+    }
+
+  }
+
+}

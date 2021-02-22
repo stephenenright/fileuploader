@@ -1,0 +1,17 @@
+@mixin ComponentBodyTitleFont() {
+  font-weight: 600;
+  font-size: 1.4em;
+  line-height: 1.1;
+  letter-spacing: 0.1rem;
+}
+
+@mixin ComponentBodyFont() {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+@mixin ComponentHeaderFont() {
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}

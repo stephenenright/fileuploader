@@ -1,0 +1,55 @@
+@import 'src/css/common/base';
+
+.ac-page_layout .ac-page_title-wrapper {
+  border: 0;
+
+  &--marginBottom {
+    margin-bottom: 1.25em;
+  }
+
+  &--paddingBottom {
+    padding-bottom: 1.25em;
+  }
+
+  .ac-page_title {
+    position: relative;
+    align-self: center;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 1.9rem;
+      color: #3b3f5c;
+      display: inline-block;
+      font-weight: 600;
+    }
+  }
+
+  &--bordered {
+    border-bottom: 1px solid #e0e6ed;
+    padding-bottom: -0.7em;
+
+    .ac-page_title h1 {
+      border-bottom: 1px solid #3a4953;
+      padding-bottom: 0.7em;
+    }
+  }
+}
+
+.ac-page_content {
+  min-height: 400px;
+  padding: 2rem 0;
+
+  &--pading-top {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ac-page_content {
+    min-height: 600px;
+  }
+}
