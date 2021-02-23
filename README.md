@@ -3,6 +3,13 @@
 This a multi module project for a simple file uploader.
 
 
+## Important Configuration Options
+
+* fileUploader.media.mediaFiles.useFileExt: Set to true to save a file with its extension to storage such as the file system.
+* fileUploader.media.mediaFiles.fileStorage.directory: The directory where files are stored. By default files are saved to the system tmp directory.
+* fileUploader.media.mediaFiles.allowedExtValidator: A regular expression such as txt|png that if set will validate the file extension to validate that it is allowed
+  
+
 ## Building And Running
 First clone the repository
 

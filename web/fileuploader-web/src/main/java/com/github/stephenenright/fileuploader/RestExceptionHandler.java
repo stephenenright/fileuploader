@@ -2,6 +2,7 @@ package com.github.stephenenright.fileuploader;
 
 import com.github.stephenenright.fileuploader.api.common.response.ApiError;
 import com.github.stephenenright.fileuploader.common.messages.ErrorMessages;
+import com.github.stephenenright.fileuploader.configuration.settings.MultipartUploadSettings;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,12 @@ import java.util.Map;
 @Slf4j
 @ControllerAdvice
 public class RestExceptionHandler {
+
+    private final MultipartUploadSettings multipartSettings;
+
+    public RestExceptionHandler(MultipartUploadSettings multipartSettings) {
+        this.multipartSettings = multipartSettings;
+    }
 
     @ExceptionHandler({Throwable.class})
     public ResponseEntity<Object> handleAll(Throwable t) {
@@ -40,8 +47,10 @@ public class RestExceptionHandler {
             log.error(musee.getMessage(), musee);
         }
 
+
         Map<String, Object> responseMap = new HashMap<>();
-        responseMap.put("error", ApiError.builder().message(musee.getMessage()).build());
+        responseMap.put("error", ApiError.builder().message(String.format("File upload not allowed. File size exceeds " +
+                "the maximum allowed file upload size of %s", multipartSettings.getMaxFileSize())).build());
         return ResponseEntity.badRequest().body(responseMap);
     }
 

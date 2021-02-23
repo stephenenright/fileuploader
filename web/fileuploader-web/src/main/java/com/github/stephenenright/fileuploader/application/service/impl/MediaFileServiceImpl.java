@@ -34,6 +34,7 @@ import java.io.InputStream;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 @Slf4j
 @Service
@@ -128,10 +129,11 @@ public class MediaFileServiceImpl implements MediaFileService {
         }
 
         if (StringUtils.isNotNullAndNotEmpty(mediaFileSettings.getAllowedExtValidator())) {
-            if (!Matcher.match(mediaFileSettings.getAllowedExtValidator(),
-                    fileExt, false)) {
+            if (!Pattern.matches(mediaFileSettings.getAllowedExtValidator(),
+                    fileExt)) {
                 //TODO improve error message with supported extensions
                 errorBuilder.addError("file", "File type is not supported");
+                return CreateResponse.createValidationFailedResponse(errorBuilder.getErrors());
             }
         }
 
